@@ -17,7 +17,6 @@
         <table class="table table-bordered table-hover table-striped">
             <thead>
                 <tr>
-                    <h1>haha</h1>
                     <th>Kode</th>
                     <th>Nama alternatif</th>
                     <th>NIM</th>
