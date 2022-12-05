@@ -54,6 +54,7 @@ if (!session()->get('logged_in')) {
                     <li><a href="<?= site_url('alternatif') ?>">Alternatif</a></li>
                     <li><a href="<?= site_url('hitung') ?>">Hitung</a></li>
                     <li><a href="<?= site_url('user/password') ?>"> Password</a></li>
+                    <li><a href="<?= site_url('user/create') ?>"> Tambah</a></li>
                     <li><a href="<?= site_url('user/logout') ?>"> Logout</a></li>
                 </ul>
             </div>

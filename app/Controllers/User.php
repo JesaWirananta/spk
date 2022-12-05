@@ -120,6 +120,12 @@ class User extends BaseController
                     'required' => 'Nama harus diisi',
                 ],
             ],
+            'pass' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Pass harus diisi',
+                ],
+            ],
         ])) {
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
@@ -127,6 +133,7 @@ class User extends BaseController
             $user->insert([
                 'id_user' => $this->request->getPost('id_user'),
                 'nama_user' => $this->request->getPost('nama_user'),
+                'pass' => $this->request->getPost('pass '),
             ]);
             $id_user = $this->request->getPost('id_user');
             query("INSERT INTO tb_rel_alternatif (kode_alternatif, id_user) SELECT kode_alternatif, '$id_user' FROM tb_alternatif");
