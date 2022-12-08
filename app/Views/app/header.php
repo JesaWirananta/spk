@@ -45,16 +45,16 @@ if (!session()->get('logged_in')) {
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Crisp <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sub Kriteria <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= site_url('crisp') ?>">Crisp</a></li>
-                            <li><a href="<?= site_url('rel_crisp') ?>">Bobot Crisp</a></li>
+                            <li><a href="<?= site_url('crisp') ?>">Sub Kriteria</a></li>
+                            <li><a href="<?= site_url('rel_crisp') ?>">Bobot Sub Kriteria</a></li>
                         </ul>
                     </li>
                     <li><a href="<?= site_url('alternatif') ?>">Alternatif</a></li>
-                    <li><a href="<?= site_url('hitung') ?>">Hitung</a></li>
+                    <li><a href="<?= site_url('hitung') ?>">Perhitungan</a></li>
                     <li><a href="<?= site_url('user/password') ?>"> Password</a></li>
-                    <li><a href="<?= site_url('user/create') ?>"> Tambah</a></li>
+                    <!-- <li><a href="<?= site_url('user/create') ?>"> Tambah</a></li> -->
                     <li><a href="<?= site_url('user/logout') ?>"> Logout</a></li>
                 </ul>
             </div>

@@ -12,7 +12,7 @@ class Alternatif extends BaseController
         $data['title'] = 'Alternatif';
         $data['q'] = $this->request->getGet('q');
         $alternatif = new AlternatifModel();
-        $data['rows'] = $alternatif->like('kode_alternatif', (string) $data['q'])->orLike('nama_alternatif', 'nim' . $data['q'])->findAll();
+        $data['rows'] = $alternatif->like('nim', $data['q'])->orLike('nama_alternatif', $data['q'])->findAll();
         $data['kriteria'] = get_kriteria();
         $data['rel_alternatif'] = get_rel_alternatif();
         $data['crisp'] = get_crisp();
