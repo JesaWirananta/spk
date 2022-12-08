@@ -3,10 +3,10 @@
         <?= show_msg() ?>
         <?= print_error() ?>
         <form method="post" action="<?= site_url('user/store') ?>">
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>ID user<span class="text-danger">*</span></label>
                 <input class="form-control" type="text" name="id_user" />
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>Username<span class="text-danger">*</span></label>
                 <input class="form-control" type="text" name="user" />

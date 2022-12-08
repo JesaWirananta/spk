@@ -107,13 +107,13 @@ class User extends BaseController
     public function store()
     {
         if (!$this->validate([
-            'id_user' => [
-                'rules' => 'required|is_unique[tb_user.id_user]',
-                'errors' => [
-                    'required' => 'Id harus diisi',
-                    'is_unique' => 'Id User sudah ada',
-                ],
-            ],
+            // 'id_user' => [
+            //     'rules' => 'required|is_unique[tb_user.id_user]',
+            //     'errors' => [
+            //         'required' => 'Id harus diisi',
+            //         'is_unique' => 'Id User sudah ada',
+            //     ],
+            // ],
             'nama_user' => [
                 'rules' => 'required',
                 'errors' => [
@@ -131,9 +131,9 @@ class User extends BaseController
         } else {
             $user = new UserModel();
             $user->insert([
-                'id_user' => $this->request->getPost('id_user'),
+                // 'id_user' => $this->request->getPost('id_user'),
                 'nama_user' => $this->request->getPost('nama_user'),
-                'pass' => $this->request->getPost('pass '),
+                'pass' => $this->request->getPost('pass'),
             ]);
             $id_user = $this->request->getPost('id_user');
             query("INSERT INTO tb_rel_alternatif (kode_alternatif, id_user) SELECT kode_alternatif, '$id_user' FROM tb_alternatif");
@@ -161,13 +161,28 @@ class User extends BaseController
                     'required' => 'Nama harus diisi',
                 ],
             ],
+
+            'nama_user' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama harus diisi',
+                ],
+            ],
+            'pass' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Pass harus diisi',
+                ],
+            ],
+
         ])) {
             return redirect()->back()->withInput()->with('error', $this->validator->listErrors());
         } else {
             $user = new UserModel();
             $user->save([
-                'id_user' => $id,
+                'id_user' => $this->request->getPost('id_user'),
                 'nama_user' => $this->request->getPost('nama_user'),
+                'pass' => $this->request->getPost('pass'),
             ]);
             return redirect()->to('/user')->with('msg', ['success', 'Data berhasil diubah!']);
         }
