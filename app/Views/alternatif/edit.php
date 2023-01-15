@@ -20,11 +20,12 @@
                 <label> FAKULTAS <span class="text-danger">*</span></label>
                 <select class="form-control" type="text" name="fakultas" value="<?= old('fakultas') ?>">
                     <option>FT</option>
-                    <option>FIK</option>
-                    <option>FMIPA</option>
-                    <option>FIS</option>
                     <option>FBS</option>
-                    <option>FIP</option>
+                    <option>FIKKM</option>
+                    <option>FIPP</option>
+                    <option>FISH</option>
+                    <option>FEB</option>
+                    <option>FMIPAK</option>
                 </select>
             </div>
 
